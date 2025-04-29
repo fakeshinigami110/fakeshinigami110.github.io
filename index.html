@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shinigami — 志に神 | AI・IoT・開発者</title>
+  <link rel="icon" href="icon.ico" type="image/x-icon">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Red_spider_lily_icon.svg/1024px-Red_spider_lily_icon.svg.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0b0b url('https://wallpapercave.com/wp/wp4978282.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: #770707; /* vibrant rose red */
+      margin-bottom: 0.5rem;
+     /* text-shadow: 0 0 4px #ff2a3b, 0 0 10px #d6002f;*/
+     text-shadow: 0 0 2px #9e8e8e, 0 0 4px #a28f92;
+     animation: glow 2s ease-in-out infinite alternate;
+      -webkit-text-stroke: 0.3px black;
+
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 2px #9e8e8e, 0 0 4px #a28f92;
+      }
+      to {
+        text-shadow: 0 0 3px #9e8e8e, 0 0 5px #a28f92;
+
+      }
+    }
+    /*
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 6px #b81e36, 0 0 12px #ff2a3b;
+      }
+      to {
+        text-shadow: 0 0 10px #ff4b6e, 0 0 20px #ff2a3b;
+      }
+    }
+      */
+    
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: #ccc;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .jp {
+      color: #b7b0b0;
+      font-weight: bold;
+    }
+    
+
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .links a {
+      color: #d60000;
+      text-decoration: none;
+      border: 2px solid #d60000;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background: #d60000;
+      color: #000;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Shinigami 志に神</h1>
+  <p>
+    Backend Developer | Edge AI & IoT | Software Engineering<br>
+    <span class="jp">未来を創る — Creating the Future</span>
+  </p>
+
+  <div class="links">
+    <a href="https://t.me/shinigami_110" target="_blank">Telegram</a>
+    <a href="https://github.com/fakeshinigami110" target="_blank">GitHub</a>
+    <a href="mailto:yaghoubi.a.sa@gmail.com">E-mail me</a>
+  </div>
+
+  <footer>
+    © 2025 Shinigami. 生きる意味をコードに込める。
+  </footer>
+
+  <script>
+    const title = document.querySelector("h1");
+    const text = "Shinigami 志に神";
+    let i = 0;
+
+    function typeEffect() {
+      if (i < text.length) {
+        title.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    title.textContent = "";
+    typeEffect();
+  </script>
+</body>
+</html>
